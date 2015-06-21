@@ -16,9 +16,14 @@ def char_relationships():
     graph_db = py2neo.Graph("http://localhost:7474/db/data/")
     # print graph_db
 
+    # #Clearing the Database - Start Fresh
+    graph_db.delete_all()
+
     # #CHARACTER DEFINITIONS
     char_eddard_stark = py2neo.Node.cast({"name" : "Eddard Stark"})
     char_catelyn_stark = py2neo.Node.cast({"name" : "Catelyn Stark"})
+
+    char_eddard_stark.properties
 
     # #RELATIONSHIP DEFINITIONS
     rel_eddard_stark_marriedTo_catelyn_stark = py2neo.Relationship(char_eddard_stark, "married", char_catelyn_stark)
@@ -30,7 +35,7 @@ def char_relationships():
     # #Number of Relationships
 
 
-    
+
     print "Graph Created"
 if __name__ == '__main__':
     char_relationships()
