@@ -5,25 +5,65 @@ __author__ = "Sachin Saligram"
 # Written by: Sachin Saligram
 # Date: 06/01/2016
 
+# #Python Modules
 import urllib, requests
 from bs4 import BeautifulSoup
-from pyquery import PyQuery
+from xml.etree import ElementTree as ET
 
-url = "http://awoiaf.westeros.org/index.php/List_of_characters#V"
+def character_description(var_url):
+	page = requests.get(var_url).text
+	soup = BeautifulSoup(page)
 
-page = requests.get(url).text
+	data_character = {}
 
-soup = BeautifulSoup(page)
-count = 0
-# for a in soup.find_all('a', href=True):
-# 	if '/index.php' in a["href"]:
-# 		print a
-# 		print "http://awoiaf.westeros.org/" + a["href"]
-# 		if count == 10:
-# 			exit()
-# 		count += 1
-#print soup
+	###########################
+	# #         Name          #
+	###########################
+	# print soup.find('title').string
+	data_character['name'] = soup.find('title').string
+
+	###########################
+	# #      Description      #
+	###########################
+	for var_name in soup.find_all('meta'):
+		if 'description' in var_name.attrs.values():
+			# print i.attrs['content']
+			data_character['description'] = var_name.attrs['content']
+
+	###########################
+	# #         Table         #
+	###########################
+	# for var_elem in soup.find_all('table'):
+	# 	for i in  list(var_elem):
 
 
-for a in soup.find_all('li'):
-	print a
+	
+	print data_character
+character_description("http://awoiaf.westeros.org/index.php/Joffrey_Baratheon")
+
+
+def get_characters():
+	url = "http://awoiaf.westeros.org/index.php/List_of_characters"
+	page = requests.get(url).text
+	soup = BeautifulSoup(page)
+
+	# #Dictionary with Character Names and their respective URLS
+	data_character_names_urls = {}
+	for var_name in soup.find_all('li'):
+		# print list(var_name)[1]
+		try:
+			if "/index.php/" in list(var_name)[1]["href"]:
+				# print list(var_name)[1]["href"]
+				# print list(var_name)[1]["title"]
+				# print "\n\n"
+				data_character_names_urls[list(var_name)[1]["title"]] = "http://awoiaf.westeros.org" + list(var_name)[1]["href"]
+		except Exception as e:
+			print e
+			print list(var_name)
+			print "\n"
+
+
+	# for key, value in data_character_names_urls.iteritems():
+	# 	print "Character Name: " + key
+	# 	print "URL: " + value
+	# 	print "\n\n"

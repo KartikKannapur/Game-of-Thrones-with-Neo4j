@@ -1,0 +1,21 @@
+{None: ' '}
+{None: ' '}
+{None: 'Reign', 'Joffrey Baratheon': ' '}
+{None: 'Full Name', 'Joffrey Baratheon': ' Joffrey Baratheon the First of His Name'}
+{None: 'Alias', 'Joffrey Baratheon': ' Joffrey the Illborn'}
+{None: 'Other Titles', 'Joffrey Baratheon': ' King of the '}
+{None: 'Born in', 'Joffrey Baratheon': ' '}
+{None: 'Died in', 'Joffrey Baratheon': ' '}
+{None: ' '}
+{None: 'Royal House', 'Joffrey Baratheon': ' '}
+{None: 'Predecessor', 'Joffrey Baratheon': ' '}
+{None: 'Heir', 'Joffrey Baratheon': ' '}
+{None: 'Successor', 'Joffrey Baratheon': ' '}
+{None: 'Queen', 'Joffrey Baratheon': ' '}
+{None: 'Father', 'Joffrey Baratheon': ' '}
+{None: 'Mother', 'Joffrey Baratheon': ' '}
+{None: ' '}
+{None: 'Books', 'Joffrey Baratheon': ' '}
+{None: 'Played by', 'Joffrey Baratheon': ' '}
+{None: 'TV series', 'Joffrey Baratheon': ' '}
+{'name': u'Joffrey Baratheon - A Wiki of Ice and Fire - A Song of Ice and Fire & Game of Thrones', 'description': "Prince Joffrey Baratheon is known to the Seven Kingdoms as the eldest son and heir of King Robert I Baratheon and Queen Cersei Lannister.  A member of House Baratheon of King's Landing, his siblings are Princess Myrcella and Prince Tommen. In the television adaptation Game of Thrones, he is played by Jack Gleeson."}
