@@ -1,0 +1,29 @@
+{
+	"character_name" : "",
+
+	"biography" : {
+		"reign" : "",
+		"alias" : ["", "" ...],
+		"titles" : ["", "" ...],
+		"born_in" : "",
+		"born_at" : "",
+		"died_in" : "",
+		"died_at" : "",
+		"about" : ""
+	},
+
+	"family" : {
+		"royal_house" : "",
+		"predecessor" : "",
+		"heir" : "",
+		"successor" : "",
+		"queen" : ["", ""],
+		"father" : ["", ""],
+		"mother" : ["", ""]
+	},
+
+	"books" : [],
+	"tv_series" : [],
+
+
+}
